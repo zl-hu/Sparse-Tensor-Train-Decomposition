@@ -1,8 +1,8 @@
-%½«ËùÓĞËã·¨½øĞĞÊ¶±ğ×¼È·ÂÊµÄ±È½Ï
+%å°†æ‰€æœ‰ç®—æ³•è¿›è¡Œè¯†åˆ«å‡†ç¡®ç‡çš„æ¯”è¾ƒ
 %PALM vs PALM_no_orth
 clear;
 clc;
-%ÕÅÁ¿¹æÄ££¬Ä¿±êÖÈ
+%tensor rank, tensor size
 s1=40;
 s2=5;
 s3=5;
@@ -14,19 +14,19 @@ problem.tensor_size=tensor_size;
 problem.tensor_rank=tensor_rank;
 n=length(tensor_size);
 
-%Ëæ»úÉú³ÉÑµÁ·¼¯Óë²âÊÔ¼¯
+%éšæœºç”Ÿæˆè®­ç»ƒé›†ä¸æµ‹è¯•é›†
 [train_orl,test_orl]=readfiles_new_2(s1,s2,s3);
  %train_orl=imnoise(train_orl,'gaussian',0,0.05);
  %test_orl=imnoise(test_orl,'gaussian',0,0.05);
-%Éú³ÉÏàÍ¬µÄ³õÊ¼µã
+%ç”Ÿæˆç›¸åŒçš„åˆå§‹ç‚¹
 
-%Éè¶¨ÕıÔò»¯²ÎÊı
+%è®¾å®šæ­£åˆ™åŒ–å‚æ•°
 
 %% STT_PALM
 mu=0.01;
-kmax=300;%×î´óµü´ú²½Êı
+kmax=300;%æœ€å¤§è¿­ä»£æ­¥æ•°
 problem.tao=train_orl;
-c_k=1.000001;%»Ø³·²ÎÊı
+c_k=1.000001;%å›æ’¤å‚æ•°
 problem.mu=mu;
 for k=1:n-1
             [Q,~]=qr(reshape(rand(tensor_rank(k),tensor_size(k),tensor_rank(k+1)),[],tensor_rank(k+1)),0);
@@ -39,7 +39,7 @@ for i=1:kmax
 [V_train,V_test]=pro(Y{i},test_orl,tensor_size,tensor_rank);
 rate_1(i)=classify(V_train,V_test,s2,s3);
 
-fprintf('STT-PALMËã·¨µÚ%d´ÎÊ¶±ğ×¼È·ÂÊÎª%d\n',i,rate_1(i));
+fprintf('STT-PALMç®—æ³•ç¬¬%dæ¬¡è¯†åˆ«å‡†ç¡®ç‡ä¸º%d\n',i,rate_1(i));
 end
 %% SNTT_MUR
 
@@ -53,7 +53,7 @@ G=SNTT_MUR_2(G_0,problem,kmax+1);
 for i=1:kmax
 [V_train,V_test]=pro(G{i},test_orl,tensor_size,tensor_rank);
 rate_2(i)=classify(V_train,V_test,s2,s3);
-fprintf('SNTT_MURËã·¨Ê¶±ğ×¼È·ÂÊÎª%f\n',rate_2(i));
+fprintf('SNTT_MURç®—æ³•è¯†åˆ«å‡†ç¡®ç‡ä¸º%f\n',rate_2(i));
 end
 
 
@@ -65,7 +65,7 @@ end
 for i=1:kmax
 [V_train_2,V_test_2]=pro(Y_2{i},test_orl,tensor_size,tensor_rank);
 rate_3(i)=classify(V_train_2,V_test_2,s2,s3);
-fprintf('NOSTT-PALMËã·¨µÚ%d´ÎÊ¶±ğ×¼È·ÂÊÎª%d\n',i,rate_3(i));
+fprintf('NOSTT-PALMç®—æ³•ç¬¬%dæ¬¡è¯†åˆ«å‡†ç¡®ç‡ä¸º%d\n',i,rate_3(i));
 end
 
 %% PTF
@@ -79,12 +79,12 @@ for i=1:kmax
  [V_train,V_test]=pro_cp(P{i},test_orl);
  rate_4(i)=classify(V_train,V_test,s2,s3);
  
- fprintf('PTFËã·¨µÚ%d´ÎÊ¶±ğ×¼È·ÂÊÎª%d\n',i,rate_4(i));
+ fprintf('PTFç®—æ³•ç¬¬%dæ¬¡è¯†åˆ«å‡†ç¡®ç‡ä¸º%d\n',i,rate_4(i));
  end
 
 
 
-%% »æÍ¼
+%% ç»˜å›¾
 plot(rate_1,'r')
 hold on;
 plot(rate_2,'g')
