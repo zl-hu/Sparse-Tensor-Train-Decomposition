@@ -1,0 +1,6 @@
+function [Q,R]=nor1_col_1(A)
+%”“πÈ“ªªØ
+a=sum(A);
+R=diag(a);
+Q=A./a;
+end
