@@ -1,25 +1,43 @@
 # Sparse Tensor Train Decomposition via PALM Algorithm (MATLAB)
 
-[![MATLAB](https://img.shields.io/badge/MATLAB-R2021a%2B-blue.svg)](https://www.mathworks.com/products/matlab.html)
-[![Paper Status](https://img.shields.io/badge/Paper%20Status-Revision%20Stage-orange)](https://arxiv.org/abs/XXXX.XXXXX)
-
-## Project Overview
-This MATLAB repository implements the algorithms and experiments for the paper **"PALM Algorithm for Sparse Tensor Train Decomposition"** (currently under revision). The code provides efficient sparse tensor train decomposition using the Proximal Alternating Linearized Minimization (PALM) framework.
+## Project Description
+This MATLAB code is associated with the paper **"PALM Algorithm for Sparse Tensor Train Decomposition"**, which has passed initial peer review and is currently in the revision stage.
 
 ---
 
-## Correspondence Between Paper Experiments and Code
-### Section 5.1: Synthetic Data Analysis
-| Experiment Case          | MATLAB Scripts                   | Description                     |
-|--------------------------|-----------------------------------|---------------------------------|
-| Varying $\mu$            | `Synthetic_data/run_experiment_mu.m`    | Sensitivity analysis for $\mu$  |
-| Varying $\gamma$         | `Synthetic_data/run_experiment_gamma.m` | Impact of regularization $\gamma$ |
-| Varying $v$              | `Synthetic_data/run_experiment_v.m`     | Convergence analysis for $v$    |
+## Experiments in the Paper and Corresponding Code
+### Section 5.1: Synthetic Data
+| Experiment Case | MATLAB Code Path               |
+|-----------------|--------------------------------|
+| Different $\mu$ | `Synthetic_data/Untitled1.m`   |
+| Different $\gamma$ | `Synthetic_data/Untitled3.m` |
+| Different $v$   | `Synthetic_data/Untitled4.m`   |
 
-### Section 5.2: Real-World Applications
-#### 5.2.1: Image Compression
-- **Script**: `applications/image_compression_demo.m`  
-  ```matlab
-  % Example usage:
-  img = imread('data/test_image.jpg');
-  compressed_tt = PALM_4(img, 'mu', 0.1, 'max_iter', 50);
+### Section 5.2: Real-World Data
+#### 5.2.1
+- Code: `Untitled7.m`
+
+#### 5.2.2
+- Code: `Untitled3.m` to `Untitled5.m`
+
+---
+
+## Core Functions
+| Function    | File         |
+|-------------|--------------|
+| `PALM_4`    | `PALM_4.m`   |
+| `SNTT_MUR_2` | `SNTT_MUR_2.m` |
+| `PTF`       | `PTF.m`      |
+
+---
+
+## MATLAB Requirements
+- MATLAB R2018b or newer
+- No additional toolboxes required
+
+---
+
+## Basic Usage
+1. Clone the repository:
+   ```matlab
+   !git clone https://github.com/yourusername/sparse-tt-palm-matlab.git
