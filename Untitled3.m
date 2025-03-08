@@ -1,7 +1,7 @@
-%²»Í¬µÄmu
+%ä¸åŒçš„mu
 clear;
 clc;
-%ÕÅÁ¿¹æÄ££¬Ä¿±êÖÈ
+%å¼ é‡è§„æ¨¡ï¼Œç›®æ ‡ç§©
 s1=40;
 s2=5;
 s3=5;
@@ -13,13 +13,13 @@ problem.tensor_size=tensor_size;
 problem.tensor_rank=tensor_rank;
 n=length(tensor_size);
 
-%Ëæ»úÉú³ÉÑµÁ·¼¯Óë²âÊÔ¼¯
+%éšæœºç”Ÿæˆè®­ç»ƒé›†ä¸æµ‹è¯•é›†
 [train_orl,test_orl]=readfiles_new_2(s1,s2,s3);
 %train_orl=imnoise(train_orl,'gaussian',0,0.05);
 %test_orl=imnoise(test_orl,'gaussian',0,0.05);
 
-%Éè¶¨ÕıÔò»¯²ÎÊı
-kmax=3;%×î´óµü´ú²½Êı
+%è®¾å®šæ­£åˆ™åŒ–å‚æ•°
+kmax=300;%æœ€å¤§è¿­ä»£æ­¥æ•°
 problem.tao=train_orl;
 mu=[0.1 0.01 0.001];
 for k=1:n-1
@@ -32,7 +32,7 @@ for k=1:n-1
             G_0.core{k}=rand(tensor_rank(k),tensor_size(k),tensor_rank(k+1));
  end
  G_0.core{n}=rand(tensor_rank(n),tensor_size(n),tensor_rank(n+1));
- c_k=1.000001;%»Ø³·²ÎÊı
+ c_k=1.000001;%å›æ’¤å‚æ•°
 
 for j=1:3
 % PALM
@@ -45,7 +45,7 @@ Y.ite{j}=X;
 for i=1:kmax+1
 [V_train,V_test]=pro(X{i},test_orl,tensor_size,tensor_rank);
 rate{j}(i)=classify(V_train,V_test,s2,s3);
-fprintf('PALMËã·¨µÚ%d´ÎÊ¶±ğ×¼È·ÂÊÎª%d\n',i,rate{j}(i));
+fprintf('PALMç®—æ³•ç¬¬%dæ¬¡è¯†åˆ«å‡†ç¡®ç‡ä¸º%d\n',i,rate{j}(i));
 end
 
 
@@ -57,7 +57,7 @@ G_1.ite{j}=G;
 for i=1:kmax+1
 [V_train,V_test]=pro(G{i},test_orl,tensor_size,tensor_rank);
 rate1{j}(i)=classify(V_train,V_test,s2,s3);
-fprintf('SNTT_MURËã·¨Ê¶±ğ×¼È·ÂÊÎª%f\n',rate1{j}(i));
+fprintf('SNTT_MURç®—æ³•è¯†åˆ«å‡†ç¡®ç‡ä¸º%f\n',rate1{j}(i));
 end
 
 end
