@@ -1,5 +1,4 @@
 %将所有算法进行识别准确率的比较
-%PALM vs PALM_no_orth
 clear;
 clc;
 %tensor rank, tensor size
