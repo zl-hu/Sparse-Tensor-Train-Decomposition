@@ -32,8 +32,9 @@ This MATLAB code is associated with the paper **"PALM Algorithm for Sparse Tenso
 ---
 
 ## MATLAB Requirements
-- MATLAB R2018b or newer
-- No additional toolboxes required
+- **MATLAB R2016b** (or newer)
+- **Tensor Toolbox**: Included in this repository.  
+  Initialize it by running `run_first.m` before using the code.
 
 ---
 
