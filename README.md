@@ -26,7 +26,7 @@ This MATLAB code is associated with the paper **"PALM Algorithm for Sparse Tenso
 | Function    | File         |
 |-------------|--------------|
 | `PALM_4`    | `PALM_4.m`   |
-|`PALM_no_orth'|'PALM_no_orth.m'|
+|`PALM_no_orth`|`PALM_no_orth.m`|
 | `SNTT_MUR_2` | `SNTT_MUR_2.m` |
 | `PTF`       | `PTF.m`      |
 
