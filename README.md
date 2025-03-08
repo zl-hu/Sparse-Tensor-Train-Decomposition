@@ -1,6 +1,6 @@
 # Sparse Tensor Train Decomposition via PALM Algorithm
 
-
+[![Paper Status](https://img.shields.io/badge/Paper%20Status-Revision%20Stage-orange)](https://arxiv.org/abs/XXXX.XXXXX)
 
 ## Project Overview
 This repository contains the implementation and experiments for the paper **"PALM Algorithm for Sparse Tensor Train Decomposition"**, which has passed initial peer review and is currently under revision. The code provides a scalable approach for sparse tensor train decomposition using the Proximal Alternating Linearized Minimization (PALM) framework.
