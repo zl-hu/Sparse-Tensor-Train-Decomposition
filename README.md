@@ -38,7 +38,3 @@ This MATLAB code is associated with the paper **"PALM Algorithm for Sparse Tenso
 
 ---
 
-## Basic Usage
-1. Clone the repository:
-   ```matlab
-   !git clone https://github.com/yourusername/sparse-tt-palm-matlab.git
