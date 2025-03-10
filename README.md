@@ -1,7 +1,9 @@
 # Sparse Tensor Train Decomposition via PALM Algorithm (MATLAB)
 
 ## Project Description
-This MATLAB code is associated with the paper **"PALM Algorithm for Sparse Tensor Train Decomposition"**, which has passed initial peer review and is currently in the revision stage.
+This work is associated with the accepted paper:  
+**"Proximal Alternating Linearized Minimization Algorithm for Sparse Tensor Train Decomposition"**  
+(Hu & Chen, 2025, *Statistics, Optimization & Information Computing*)
 
 ---
 
