@@ -31,6 +31,10 @@ This MATLAB code is associated with the paper **"PALM Algorithm for Sparse Tenso
 | `PTF`       | `PTF.m`      |
 
 ---
+## Citation
+Hu, Z., & Chen, Z. (2025). Proximal Alternating Linearized Minimization Algorithm for Sparse Tensor Train Decomposition. _Statistics, Optimization & Information Computing_. https://doi.org/10.19139/soic-2310-5070-2440
+
+---
 
 ## MATLAB Requirements
 - **MATLAB R2016b** (or newer)
