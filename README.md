@@ -26,6 +26,7 @@ This work is associated with the accepted paper:
 
 ## Core Functions
 - ​**`PALM_4`** - Proximal Alternating Linearized Minimization algorithm (Main optimization framework)
+- **`PALM_no_orth`** - PALM variant without orthogonal constraints (Other components unchanged)
 - ​**`SNTT_MUR_2`** Sparse Nonnegative Tensor Train factorization-Multiplicative update rules algorithm
 - ​**`PTF`** - Positive Tensor Factorization algorithm
 
