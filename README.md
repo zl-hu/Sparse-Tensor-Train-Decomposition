@@ -30,7 +30,7 @@ This work is associated with the accepted paper:
 - ​**`SNTT_MUR_2`** Sparse Nonnegative Tensor Train factorization-Multiplicative update rules algorithm
 - ​**`PTF`** - Positive Tensor Factorization algorithm
 
-> Note: Other auxiliary functions are designed for debugging and algorithmic extensions. Users should prioritize the three core functions above.
+> Note: Other auxiliary functions are designed for debugging and algorithmic extensions. Users should prioritize the  core functions above.
 
 ---
 ## Citation
