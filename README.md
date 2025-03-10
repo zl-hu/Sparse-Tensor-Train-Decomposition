@@ -25,12 +25,11 @@ This work is associated with the accepted paper:
 ---
 
 ## Core Functions
-| Function    | File         |
-|-------------|--------------|
-| `PALM_4`    | `PALM_4.m`   |
-|`PALM_no_orth`|`PALM_no_orth.m`|
-| `SNTT_MUR_2` | `SNTT_MUR_2.m` |
-| `PTF`       | `PTF.m`      |
+- ​**`PALM_4`** - Proximal Alternating Linearized Minimization algorithm (Main optimization framework)
+- ​**`SNTT_MUR_2`** Sparse Nonnegative Tensor Train factorization-Multiplicative update rules algorithm
+- ​**`PTF`** - Positive Tensor Factorization algorithm
+
+> Note: Other auxiliary functions are designed for debugging and algorithmic extensions. Users should prioritize the three core functions above.
 
 ---
 ## Citation
