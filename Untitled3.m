@@ -1,7 +1,6 @@
-%不同的mu
+
 clear;
 clc;
-%张量规模，目标秩
 s1=40;
 s2=5;
 s3=5;
@@ -13,13 +12,11 @@ problem.tensor_size=tensor_size;
 problem.tensor_rank=tensor_rank;
 n=length(tensor_size);
 
-%随机生成训练集与测试集
 [train_orl,test_orl]=readfiles_new_2(s1,s2,s3);
 %train_orl=imnoise(train_orl,'gaussian',0,0.05);
 %test_orl=imnoise(test_orl,'gaussian',0,0.05);
 
-%设定正则化参数
-kmax=300;%最大迭代步数
+kmax=300;%�?��迭代步数
 problem.tao=train_orl;
 mu=[0.1 0.01 0.001];
 for k=1:n-1
@@ -45,7 +42,7 @@ Y.ite{j}=X;
 for i=1:kmax+1
 [V_train,V_test]=pro(X{i},test_orl,tensor_size,tensor_rank);
 rate{j}(i)=classify(V_train,V_test,s2,s3);
-fprintf('PALM算法第%d次识别准确率为%d\n',i,rate{j}(i));
+fprintf('PALM算法�?d次识别准确率�?d\n',i,rate{j}(i));
 end
 
 
